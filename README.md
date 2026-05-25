@@ -237,32 +237,6 @@ Mongoose `.populate()` automatically replaces these IDs with the full documents 
 
 ---
 
-## 🌐 Deployment Guide
-
-### Database → MongoDB Atlas
-1. Go to [mongodb.com/atlas](https://www.mongodb.com/atlas) → Free tier → Create cluster
-2. Add a database user and whitelist `0.0.0.0/0` in Network Access
-3. Click **Connect** → **Drivers** → copy the connection string
-4. Replace `<password>` with your DB user's password
-5. Paste into `MONGO_URI` in your environment
-
-### Backend → Render (free tier)
-1. Push your `backend/` folder to a GitHub repo
-2. Go to [render.com](https://render.com) → New Web Service → connect repo
-3. **Build command:** `npm install`
-4. **Start command:** `npm start`
-5. Add environment variables: `MONGO_URI`, `JWT_SECRET`, `PORT`
-6. Deploy — note your service URL (e.g. `https://pulse-api.onrender.com`)
-
-### Frontend → Netlify (free tier)
-1. In `frontend/js/api.js`, change:
-   ```js
-   const BASE_URL = "https://pulse-api.onrender.com/api";
-   ```
-2. Drag-and-drop your `frontend/` folder to [netlify.com/drop](https://app.netlify.com/drop)
-3. Done! Your site is live.
-
----
 
 ## ⚠️ Common Errors & Fixes
 
