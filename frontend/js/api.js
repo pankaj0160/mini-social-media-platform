@@ -11,7 +11,7 @@
 
 // ─── Configuration ────────────────────────────────────────
 // Change this to your deployed backend URL in production
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = (window.APP_CONFIG?.API_BASE_URL || "http://localhost:5000") + "/api";
 
 // ─── Helper: build Authorization header ───────────────────
 /**

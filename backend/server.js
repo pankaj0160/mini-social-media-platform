@@ -31,7 +31,8 @@ app.use(express.json());
 // Enable CORS so the frontend (different origin) can call the API
 app.use(
   cors({
-    origin: "*", // In production, replace with your actual frontend URL
+    origin: process.env.FRONTEND_URL || "http://localhost:5500",
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
