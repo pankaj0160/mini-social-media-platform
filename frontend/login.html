@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Pulse</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-brand">
+      <div class="brand-logo">✦</div>
+      <h1 class="brand-name">Pulse</h1>
+      <p class="brand-tagline">Share your moment with the world</p>
+    </div>
+    <div class="auth-card">
+      <h2>Welcome back</h2>
+      <p class="auth-subtitle">Sign in to your account</p>
+      <span class="error-msg" id="loginGeneralError"></span>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" />
+          <span class="error-msg" id="loginEmailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" />
+          <span class="error-msg" id="loginPasswordError"></span>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Sign In</button>
+      </form>
+      <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

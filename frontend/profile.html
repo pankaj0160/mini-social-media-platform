@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Pulse</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">✦ Pulse</a>
+      <div class="nav-right">
+        <a href="#" id="profileLink" class="nav-link">
+          <span id="userDisplayName"></span>
+        </a>
+        <button id="logoutBtn" class="btn-ghost">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+  <main class="page-layout page-layout--narrow">
+
+    <!-- Profile header card -->
+    <div class="profile-header-card">
+      <div class="profile-avatar-wrap">
+        <div class="avatar avatar-xl" id="profileAvatar"></div>
+      </div>
+      <div class="profile-info">
+        <h2 id="profileUsername" class="profile-username">Loading…</h2>
+        <div class="profile-bio-container">
+          <p id="profileBio" class="profile-bio"></p>
+          <button id="editBioBtn" class="btn-icon btn-edit-bio" style="display:none;" title="Edit bio">✎</button>
+        </div>
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-num" id="profileFollowers">0</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="profileFollowing">0</span>
+            <span class="stat-label">Following</span>
+          </div>
+        </div>
+        <button id="followBtn" class="btn-primary" style="margin-top:1rem;">Follow</button>
+      </div>
+    </div>
+
+    <!-- User posts -->
+    <div class="profile-posts-section">
+      <h3 class="section-title">Posts</h3>
+      <div id="profilePosts">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading posts…</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>

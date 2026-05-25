@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed — Pulse</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">✦ Pulse</a>
+
+      <div class="nav-search-wrap">
+        <input type="text" id="searchInput" class="nav-search" placeholder="Search users…" autocomplete="off" />
+        <div id="searchResults" class="search-dropdown"></div>
+      </div>
+
+      <div class="nav-right">
+        <a href="#" id="profileLink" class="nav-link">
+          <span id="userDisplayName"></span>
+        </a>
+        <button id="logoutBtn" class="btn-ghost">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ MAIN ════════════════════════════════ -->
+  <main class="page-layout">
+
+    <!-- Left sidebar (desktop only) -->
+    <aside class="sidebar-left">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Navigation</h3>
+        <nav class="sidebar-nav">
+          <a href="index.html" class="sidebar-link active">🏠 Feed</a>
+          <a href="#" id="sidebarProfileLink" class="sidebar-link">👤 My Profile</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Center — feed -->
+    <section class="feed-column">
+
+      <!-- Create post -->
+      <div class="create-post-card">
+        <form id="postForm">
+          <textarea
+            id="postContent"
+            class="post-textarea"
+            placeholder="What's on your mind?"
+            maxlength="500"
+            rows="3"
+          ></textarea>
+          <div class="post-form-footer">
+            <span id="charCount" class="char-count">500 characters remaining</span>
+            <button type="submit" class="btn-primary">Share</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Posts feed -->
+      <div id="postsFeed"></div>
+    </section>
+
+    <!-- Right sidebar (desktop only) -->
+    <aside class="sidebar-right">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">About Pulse</h3>
+        <p class="sidebar-text">A mini social platform built with Node.js, Express, MongoDB and Vanilla JS.</p>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/posts.js"></script>
+  <script>
+    // Set up sidebar profile link
+    const cu = getCurrentUser();
+    if (cu) {
+      document.getElementById("sidebarProfileLink").href = `profile.html?id=${cu._id}`;
+    }
+  </script>
+</body>
+</html>
