@@ -49,6 +49,14 @@ social-media-app/
 └── README.md
 ```
 
+<img width="1379" height="854" alt="Screenshot 2026-05-25 201331" src="https://github.com/user-attachments/assets/09cee140-25fb-4cb5-8cbb-4a7ba6930e24" />
+
+<img width="1337" height="864" alt="Screenshot 2026-05-25 201254" src="https://github.com/user-attachments/assets/91ab1545-32a2-417b-ac8d-37c026cbe218" />
+
+<img width="1329" height="817" alt="Screenshot 2026-05-25 201238" src="https://github.com/user-attachments/assets/e594a822-16cb-4526-8c52-ea1933a5484d" />
+
+<img width="1333" height="802" alt="Screenshot 2026-05-25 201219" src="https://github.com/user-attachments/assets/526e1df9-d592-432f-a8e8-1174f9f2cf53" />
+
 ---
 
 ## 🚀 Quick Start
