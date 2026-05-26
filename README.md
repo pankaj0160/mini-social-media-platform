@@ -59,7 +59,7 @@ social-media-app/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) v18 or later
